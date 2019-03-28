@@ -1,0 +1,25 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+        <item name="windowActionModeOverlay">true</item>
+    </style>
+
+    <style name="MyToolbarTheme" parent="ThemeOverlay.AppCompat.Light">
+
+        <item name="android:textColorPrimary">@android:color/white</item>  <!-- Text color of Toolbar Title -->
+        <item name="android:textColorSecondary">@android:color/white</item><!-- Color of Overflow Menu ( 3 dots icon )
+                                                                                    and color of Navigation Drawer Icon-->
+    </style>
+
+    <style name="MyPopupTheme" parent="ThemeOverlay.AppCompat.Light">
+        <item name="android:background">@color/overflowMenuBg</item><!--Background of Overflow Menu-->
+        <item name="android:textColorPrimary">@color/grey_800</item><!-- Text color of Overflow Menu items-->
+    </style>
+
+</resources>

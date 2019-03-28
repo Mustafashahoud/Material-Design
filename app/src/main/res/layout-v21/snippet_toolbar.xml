@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Layout-v21 This ile for api form 21 and above
+ anf Layout is for api below 21-->
+<android.support.v7.widget.Toolbar
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:apps="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorPrimary"
+    android:minHeight="?android:attr/actionBarSize"
+    app:theme="@style/MyToolbarTheme"
+    app:popupTheme="@style/MyPopupTheme">
+
+</android.support.v7.widget.Toolbar>

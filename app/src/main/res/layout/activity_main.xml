@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:text="Toolbar Example"
+        android:textColor="#9E9E9E"
+        android:textSize="30sp"
+        android:id="@+id/textView" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        android:id="@+id/linearLayout">
+
+        <Button
+            android:id="@+id/standaloneToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:onClick="showStandaloneToolbar"
+            android:text="Standalone Toolbar"/>
+
+        <Button
+            android:id="@+id/btnCollapsingToolbarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:onClick="showToolbarAsActionbar"
+            android:text="CollapsingToolbarLayout"/>
+
+        <Button
+            android:id="@+id/contextualMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Contextual Menu"
+            android:layout_gravity="center_horizontal"
+            android:onClick="showContextualMenu" />
+        <Button
+            android:id="@+id/appbarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="AppbarLayout"
+            android:layout_gravity="center_horizontal" />
+
+        <Button
+            android:id="@+id/btnNavigationView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Navigation View"
+            android:layout_gravity="center_horizontal" />
+        <Button
+            android:id="@+id/btnRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Recycler View"
+            android:layout_gravity="center_horizontal" />
+    </LinearLayout>
+</RelativeLayout>
