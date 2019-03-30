@@ -1,11 +1,14 @@
-package com.example.materialdesignapp;
+package com.example.materialdesignapp.activities;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.widget.LinearLayout;
+
+import com.example.materialdesignapp.DataModel;
+import com.example.materialdesignapp.R;
+import com.example.materialdesignapp.adapters.RecyclerViewAdapter;
 
 public class RecyclerViewActivity extends AppCompatActivity {
     private static final String TAG = "RecyclerViewActivity";

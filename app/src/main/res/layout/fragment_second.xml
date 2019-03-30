@@ -1,12 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="match_parent">
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_centerInParent="true"
-        android:id="@+id/img2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey"
+    android:layout_margin="80dp">
 
-        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvSecondFrag"
+        android:text="2"
+        android:textSize="50dp"
+        android:gravity="center"
+        android:layout_centerInParent="true"
+        android:textColor="@color/black" />
 
 </RelativeLayout>

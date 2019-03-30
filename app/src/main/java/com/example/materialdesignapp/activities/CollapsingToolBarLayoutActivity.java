@@ -1,4 +1,4 @@
-package com.example.materialdesignapp;
+package com.example.materialdesignapp.activities;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -10,6 +10,8 @@ import android.support.v7.widget.CardView;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.widget.Toast;
+
+import com.example.materialdesignapp.R;
 
 public class CollapsingToolBarLayoutActivity extends AppCompatActivity {
     Toolbar mToolbar ;

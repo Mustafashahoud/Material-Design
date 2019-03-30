@@ -1,4 +1,4 @@
-package com.example.materialdesignapp;
+package com.example.materialdesignapp.adapters;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
@@ -7,6 +7,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.example.materialdesignapp.DataModel;
+import com.example.materialdesignapp.R;
 
 import java.util.List;
 

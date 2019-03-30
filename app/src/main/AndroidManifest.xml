@@ -10,7 +10,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".activities.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -18,12 +18,13 @@
 
             </intent-filter>
         </activity>
-        <activity android:name=".StandAloneToolBarActivity"/>
-        <activity android:name=".ContextualToolBarActivity"/>
-        <activity android:name=".AppBarLayout"/>
-        <activity android:name="CollapsingToolBarLayoutActivity"/>
-        <activity android:name=".NavigationViewActivity"/>
-        <activity android:name=".RecyclerViewActivity"/>
+        <activity android:name=".activities.StandAloneToolBarActivity"/>
+        <activity android:name=".activities.ContextualToolBarActivity"/>
+        <activity android:name=".activities.AppBarLayout"/>
+        <activity android:name=".activities.CollapsingToolBarLayoutActivity"/>
+        <activity android:name=".activities.NavigationViewActivity"/>
+        <activity android:name=".activities.RecyclerViewActivity"/>
+        <activity android:name=".activities.TestFragmentsActivity"/>
 
 
     </application>

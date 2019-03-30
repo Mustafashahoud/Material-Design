@@ -1,6 +1,5 @@
-package com.example.materialdesignapp;
+package com.example.materialdesignapp.activities;
 
-import android.app.Activity;
 import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -12,6 +11,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
+
+import com.example.materialdesignapp.R;
 
 public class ContextualToolBarActivity extends AppCompatActivity {
 

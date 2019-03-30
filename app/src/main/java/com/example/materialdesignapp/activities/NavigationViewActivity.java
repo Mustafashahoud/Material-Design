@@ -1,4 +1,4 @@
-package com.example.materialdesignapp;
+package com.example.materialdesignapp.activities;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -15,6 +15,10 @@ import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.widget.TextView;
 
+import com.example.materialdesignapp.R;
+import com.example.materialdesignapp.fragments.FirstFragment;
+import com.example.materialdesignapp.fragments.SecondFragment;
+
 public class NavigationViewActivity extends AppCompatActivity  {
     private static final String TAG = "NavigationViewActivity";
     private Toolbar mToolbar;
@@ -22,6 +26,7 @@ public class NavigationViewActivity extends AppCompatActivity  {
     private TextView tvEmail;
     Context mContext = NavigationViewActivity.this;
     NavigationView mNavigationView;
+    Fragment fragment =  null;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -71,8 +76,6 @@ public class NavigationViewActivity extends AppCompatActivity  {
         mNavigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
-
-                Fragment fragment = null;
                // Class fragmentClass;
                 switch (menuItem.getItemId()) {
                     case R.id.first:
@@ -130,5 +133,6 @@ public class NavigationViewActivity extends AppCompatActivity  {
         }
         return super.onOptionsItemSelected(item);
     }
+
 }
 

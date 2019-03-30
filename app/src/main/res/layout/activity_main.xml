@@ -9,7 +9,7 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="40dp"
-        android:text="Toolbar Example"
+        android:text="Material Design Example"
         android:textColor="#9E9E9E"
         android:textSize="30sp"
         android:id="@+id/textView" />
@@ -62,6 +62,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Recycler View"
+            android:layout_gravity="center_horizontal" />
+
+        <Button
+            android:id="@+id/btnTestFragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Test frag"
             android:layout_gravity="center_horizontal" />
     </LinearLayout>
 </RelativeLayout>

@@ -1,4 +1,4 @@
-package com.example.materialdesignapp;
+package com.example.materialdesignapp.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -6,6 +6,8 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
+
+import com.example.materialdesignapp.R;
 
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
@@ -15,6 +17,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     Button btnCollapsingToolbarLayout;
     Button btnNavigationView;
     Button btnRecyclerView;
+    Button btnTestFragment;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -29,6 +32,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnCollapsingToolbarLayout = findViewById(R.id.btnCollapsingToolbarLayout);
         btnNavigationView = findViewById(R.id.btnNavigationView);
         btnRecyclerView = findViewById(R.id.btnRecyclerView);
+        btnTestFragment = findViewById(R.id.btnTestFragment);
 
         //Button click listeners
         btnContextualToolbar.setOnClickListener(this);
@@ -37,6 +41,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnCollapsingToolbarLayout.setOnClickListener(this);
         btnNavigationView.setOnClickListener(this);
         btnRecyclerView.setOnClickListener(this);
+        btnTestFragment.setOnClickListener(this);
 
 
     }
@@ -70,6 +75,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.btnRecyclerView:
                 Intent intent6 = new Intent(MainActivity.this, RecyclerViewActivity.class);
                 startActivity(intent6);
+                break;
+
+            case R.id.btnTestFragment:
+                Intent intent7 = new Intent(MainActivity.this, TestFragmentsActivity.class);
+                startActivity(intent7);
                 break;
 
         }
