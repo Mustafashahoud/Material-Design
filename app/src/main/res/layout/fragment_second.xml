@@ -14,5 +14,12 @@
         android:gravity="center"
         android:layout_centerInParent="true"
         android:textColor="@color/black" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textReceived"
+        android:layout_below="@+id/tvSecondFrag"
+        android:text="hello"
+        android:layout_centerInParent="true"/>
 
 </RelativeLayout>

@@ -15,5 +15,13 @@
         android:textColor="@color/black"
         />
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvFirstFrag"
+        android:layout_centerInParent="true"
+        android:text="go"
+        android:id="@+id/go"/>
+
 
 </RelativeLayout>

@@ -14,11 +14,12 @@ import com.example.materialdesignapp.R;
 import com.example.materialdesignapp.fragments.FirstFragment;
 import com.example.materialdesignapp.fragments.SecondFragment;
 
-public  class TestFragmentsActivity extends AppCompatActivity {
+public  class TestFragmentsActivity extends AppCompatActivity implements ActionListenerInterface {
     FragmentManager mFragmentManager;
     Button btnTestFrag;
 
     Fragment fragment;
+    Fragment fragment2;
     TextView textView;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -63,8 +64,10 @@ public  class TestFragmentsActivity extends AppCompatActivity {
             fragment = new SecondFragment();
         }else if (fragment instanceof SecondFragment){
             fragment = new FirstFragment();
+            ((FirstFragment) fragment).setActionListerInterface(this);
         }else {// null case there is nothing in the container
             fragment = new FirstFragment();
+            ((FirstFragment) fragment).setActionListerInterface(this);
         }
         FragmentTransaction ft = mFragmentManager.beginTransaction();
         ft.add(R.id.containerTest, fragment);
@@ -83,5 +86,24 @@ public  class TestFragmentsActivity extends AppCompatActivity {
 
         }else
         super.onBackPressed();
+    }
+
+    public void goToSecondFragWithBundle(Bundle bundle){
+
+        fragment2 = new SecondFragment();
+        fragment2.setArguments(bundle);
+        FragmentTransaction ft = mFragmentManager.beginTransaction();
+        ft.addToBackStack(fragment2.toString());
+        ft.replace(R.id.containerTest, fragment2).commit();
+    }
+
+    @Override
+    public void onCallbackListener(Bundle bundle) {
+        int actionInt = bundle.getInt(ActionListenerInterface.keyForActionValue);
+        String valueReceived = bundle.getString(ActionListenerInterface.getKeyForStringValue, "This is Default");
+
+        if (actionInt == ActionListenerInterface.ACTION_KEY){
+            goToSecondFragWithBundle(bundle);
+        }
     }
 }
