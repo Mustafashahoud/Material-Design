@@ -25,6 +25,7 @@
         <activity android:name=".activities.NavigationViewActivity"/>
         <activity android:name=".activities.RecyclerViewActivity"/>
         <activity android:name=".activities.TestFragmentsActivity"/>
+        <activity android:name=".activities.SecParcebleActivity"/>
 
 
     </application>

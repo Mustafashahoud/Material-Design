@@ -18,6 +18,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     Button btnNavigationView;
     Button btnRecyclerView;
     Button btnTestFragment;
+    Button btnToParcelableActivity;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -33,6 +34,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnNavigationView = findViewById(R.id.btnNavigationView);
         btnRecyclerView = findViewById(R.id.btnRecyclerView);
         btnTestFragment = findViewById(R.id.btnTestFragment);
+        btnToParcelableActivity = findViewById(R.id.btnToParcelableActivity);
 
         //Button click listeners
         btnContextualToolbar.setOnClickListener(this);
@@ -42,6 +44,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnNavigationView.setOnClickListener(this);
         btnRecyclerView.setOnClickListener(this);
         btnTestFragment.setOnClickListener(this);
+        btnToParcelableActivity.setOnClickListener(this);
 
 
     }
@@ -82,8 +85,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 startActivity(intent7);
                 break;
 
+            case R.id.btnToParcelableActivity:
+                Intent intent = new Intent(this, SecParcebleActivity.class);
+                ParcelableDataModel obj = new ParcelableDataModel("Mustafa", "Shahoud", "Msc");
+                intent.putExtra("this message is being send from MainActivity", obj);
+                startActivity(intent);
         }
-
-
     }
 }
