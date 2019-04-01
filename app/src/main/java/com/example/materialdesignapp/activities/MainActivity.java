@@ -86,7 +86,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
 
             case R.id.btnToParcelableActivity:
-                Intent intent = new Intent(this, SecParcebleActivity.class);
+                Intent intent = new Intent(this, SecParcelableActivity.class);
                 ParcelableDataModel obj = new ParcelableDataModel("Mustafa", "Shahoud", "Msc");
                 intent.putExtra("this message is being send from MainActivity", obj);
                 startActivity(intent);

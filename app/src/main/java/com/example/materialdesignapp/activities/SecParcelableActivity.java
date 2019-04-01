@@ -8,7 +8,7 @@ import android.widget.TextView;
 
 import com.example.materialdesignapp.R;
 
-public class SecParcebleActivity extends AppCompatActivity {
+public class SecParcelableActivity extends AppCompatActivity {
 
     TextView tvReceived;
     @Override
@@ -17,8 +17,9 @@ public class SecParcebleActivity extends AppCompatActivity {
         setContentView(R.layout.activity_sec_parcelable);
         tvReceived =findViewById(R.id.tvReceived);
 
-        Intent intent = getIntent();
 
+
+        Intent intent = getIntent();
         ParcelableDataModel obj = intent.getParcelableExtra("this message is being send from MainActivity");
         tvReceived.setText(obj.getFirstName() + " " + obj.getLastName() +" " + obj.getDegree());
 

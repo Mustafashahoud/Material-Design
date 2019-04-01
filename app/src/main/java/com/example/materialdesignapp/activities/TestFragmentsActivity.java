@@ -1,5 +1,6 @@
 package com.example.materialdesignapp.activities;
 
+import android.content.IntentFilter;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -18,13 +19,31 @@ public  class TestFragmentsActivity extends AppCompatActivity implements ActionL
     FragmentManager mFragmentManager;
     Button btnTestFrag;
 
+    MyBroadcastReceiver mMyBroadcastReceiver;
+
     Fragment fragment;
     Fragment fragment2;
     TextView textView;
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        IntentFilter intentFilter = new IntentFilter("android.intent.action.AIRPLANE_MODE");
+        registerReceiver(mMyBroadcastReceiver, intentFilter );
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        unregisterReceiver(mMyBroadcastReceiver);
+    }
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.fragment_trasction_test);
+
+        mMyBroadcastReceiver = new MyBroadcastReceiver();
 
         mFragmentManager = getSupportFragmentManager();
         textView = findViewById(R.id.logTextView);
@@ -100,7 +119,7 @@ public  class TestFragmentsActivity extends AppCompatActivity implements ActionL
     @Override
     public void onCallbackListener(Bundle bundle) {
         int actionInt = bundle.getInt(ActionListenerInterface.keyForActionValue);
-        String valueReceived = bundle.getString(ActionListenerInterface.getKeyForStringValue, "This is Default");
+        //String valueReceived = bundle.getString(ActionListenerInterface.getKeyForStringValue, "This is Default");
 
         if (actionInt == ActionListenerInterface.ACTION_KEY){
             goToSecondFragWithBundle(bundle);
